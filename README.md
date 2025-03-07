@@ -16,7 +16,8 @@ Antes de executar os testes, certifique-se de ter os seguintes requisitos instal
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Muginsk/testescargajmeter.git
+   
    cd seu-repositorio
    ```
 2. Baixe e instale o Apache JMeter.
