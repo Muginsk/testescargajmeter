@@ -86,9 +86,6 @@ Isso irá gerar um relatório HTML em `relatorio/HTML/`.
 
 A maioria dos erros está relacionada ao tempo de resposta ultrapassando o limite esperado. É recomendável analisar a capacidade do servidor e possíveis gargalos na aplicação.
 
-## Contribuição
-
-Se deseja contribuir para este projeto, sinta-se à vontade para abrir um pull request ou relatar problemas na seção de **Issues**.
 
 ## Licença
 
