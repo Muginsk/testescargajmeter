@@ -56,7 +56,7 @@ Para executar os testes via terminal e gerar relatórios automaticamente, use o 
 
 
 ```sh
-jmeter -n -t Jmeter\testescargajmeter\scripttest-plan.jmx -l -o C:\projetosAutomacao\Jmeter\testescargajmeter\relatorio\HTML
+jmeter -n -t Jmeter\testescargajmeter\scripttest-plan.jmx -l -o Jmeter\testescargajmeter\relatorio\HTML
 ```
 
 Isso irá gerar um relatório HTML em `relatorio/HTML/`.
