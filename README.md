@@ -21,22 +21,23 @@ Antes de executar os testes, certifique-se de ter os seguintes requisitos instal
    cd seu-repositorio
    ```
 2. Baixe e instale o Apache JMeter.
-3. Abra o JMeter e carregue o script de teste localizado em `testes/jmeter/test-plan.jmx`.
+3. Abra o JMeter e carregue o script de teste localizado em `Jmeter\testescargajmeter\script`.
 
 ## Estrutura do Projeto
 
 ```
 /
-|-- testes/
-|   |-- jmeter/
-|   |   |-- test-plan.jmx  # Plano de teste do JMeter
-|   |   |-- config/        # Arquivos de configuração
-|   |   |-- data/          # Dados para testes
-|   |   |-- results/       # Resultados dos testes
-|-- relatorio/
-|   |-- HTML/              # Relatórios em formato HTML
-|   |-- summary.csv        # Resumo dos testes
-|-- README.md              # Documentação do projeto
+|-- Jmeter/
+|   |-- testecargajmeter/
+|   |   |-- script
+|   |   |   |-- View Results in Table.jmx
+|   |   |-- relatorio
+|   |   |   |-- HTML
+|   |   |   |   |--index.html
+|   |   |   |   |--statics.json
+|   |   |   |-- summary.csv
+   
+
 ```
 
 ## Como Executar os Testes
@@ -44,7 +45,7 @@ Antes de executar os testes, certifique-se de ter os seguintes requisitos instal
 ### Via Interface Gráfica (GUI)
 
 1. Abra o JMeter.
-2. Carregue o arquivo `testes/jmeter/test-plan.jmx`.
+2. Carregue o arquivo `View Results in Table.jmx`.
 3. Configure os parâmetros do teste (se necessário).
 4. Clique no botão **Iniciar** para rodar o teste.
 
@@ -55,7 +56,7 @@ Para executar os testes via terminal e gerar relatórios automaticamente, use o 
 
 
 ```sh
-jmeter -n -t testes/jmeter/test-plan.jmx -l testes/jmeter/results/test-results.jtl -e -o relatorio/HTML/
+jmeter -n -t Jmeter\testescargajmeter\scripttest-plan.jmx -l -o C:\projetosAutomacao\Jmeter\testescargajmeter\relatorio\HTML
 ```
 
 Isso irá gerar um relatório HTML em `relatorio/HTML/`.
