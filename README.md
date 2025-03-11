@@ -1,6 +1,5 @@
-# testescargajmeter
+# Teste de Carga Com Jmeter
 
-# JMeter Load Test Project
 
 Este repositório contém um projeto de automação de testes de carga utilizando o [Apache JMeter](https://jmeter.apache.org/). O objetivo é realizar testes de carga e desempenho em aplicações web, analisando os tempos de resposta, taxa de erros e throughput.
 
