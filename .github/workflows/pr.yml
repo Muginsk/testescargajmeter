@@ -1,0 +1,38 @@
+name: JMeter Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install JMeter
+        run: |
+          sudo apt update
+          sudo apt install -y openjdk-17-jdk
+          wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz
+          tar -xzf apache-jmeter-5.5.tgz
+          mv apache-jmeter-5.5 $HOME/jmeter
+          echo "$HOME/jmeter/bin" >> $GITHUB_PATH
+          jmeter -v
+
+      - name: Run JMeter Test
+        run: |
+          mkdir -p results
+          jmeter -n -t script/View Results in Table.jmx
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: jmeter-results
+          path: relatorio/

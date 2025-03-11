@@ -184,7 +184,7 @@ function compareByXCoordinate(coord1, coord2) {
  */
 
 var showControllersOnly = false;
-var seriesFilter = "((^s0)|(^s1))(-sucesso|-falha)? ";
+var seriesFilter = "(sucesso|falha) ";
 var filtersOnlySampleSeries = true;
 
 // Fixes time stamps
