@@ -23,16 +23,19 @@ jobs:
           wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.5.tgz
           tar -xzf apache-jmeter-5.5.tgz
           mv apache-jmeter-5.5 $HOME/jmeter
+          # Adicionando o diretório bin ao PATH corretamente
           echo "$HOME/jmeter/bin" >> $GITHUB_PATH
-          jmeter -v
+          # Verificando a instalação do JMeter
+          $HOME/jmeter/bin/jmeter -v
 
       - name: Run JMeter Test
         run: |
           mkdir -p results
-          jmeter -n -t script/View Results in Table.jmx
+          # Executando o JMeter com o arquivo .jmx específico
+          $HOME/jmeter/bin/jmeter -n -t ./script/View\ Results\ in\ Table.jmx -l ./results/test_results.jtl
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v4
         with:
           name: jmeter-results
-          path: relatorio/
+          path: results/test_results.jtl
